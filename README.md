@@ -1,7 +1,7 @@
 # VotSchoolProject
 # Node.js Web Application with MySQL Database
 
-This is a simple web application built with Node.js and Express, using a MySQL database and deployed with Docker. The application takes user input through an HTML form, stores the input in the MySQL database, and displays the stored information in a list.
+This is a simple web application built with Node.js and Express, using a MySQL database and deployed with Docker. The application takes user input through an HTML form, stores the input in the MySQL database, and displays the stored information in a table.
 
 
 
