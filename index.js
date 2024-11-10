@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3400;
 
 // Database connection-a
 const db = mysql.createConnection({
-  host: '127.0.0.1',   // pulna hujnq, 2 chasa za db-to deto e tupo i oshte 2 za tva tupo ime
+  host: 'host.docker.internal',   // pulna hujnq, 2 chasa za db-to deto e tupo i oshte 2 za tva tupo ime
   user: 'root',
   password: 'Manchester United',
   database: 'novashema',

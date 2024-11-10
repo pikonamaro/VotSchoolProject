@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    ports:
+      - "3400:3400"
+    environment:
+      - DB_HOST=127.0.0.1
+      - DB_USER=root
+      - DB_PASSWORD=Manchester United
+      - DB_NAME=novashema
+      - PORT=3400
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: Manchester United
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: novashema
+    ports:
+      - "3320:3310"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
