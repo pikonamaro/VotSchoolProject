@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3400;
 
 // Database connection-a
 const db = mysql.createConnection({
-  host: 'host.docker.internal',   // pulna hujnq, 2 chasa za db-to deto e tupo i oshte 2 za tva tupo ime
+  host: 'host.docker.internal',
   user: 'root',
   password: 'Manchester United',
   database: 'novashema',
@@ -41,7 +41,7 @@ app.post('/api/saveUser', (req, res) => {
   });
 });
 
-// API route to fetch all users
+// API za fetch-vane na vsichkite user-i
 app.get('/api/users', (req, res) => {
   const sql = 'SELECT * FROM users';
   db.query(sql, (err, results) => {
