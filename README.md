@@ -11,6 +11,8 @@ Download the project files on a machine
 
 Change the directory to where you downloaded the files
 
+You must have an installed npm
+
 Install Mysql, and enter the specific data that is in index,js
 
 Install docker and docker-compose
