@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3400;
 
 // Database connection-a
 const db = mysql.createConnection({
-  host: '127.0.0.1',   // pulna hujnq, 2 chasa za db-to deto e tupo i oshte 2 za tva tupo ime
+  host: 'host.docker.internal',   // pulna hujnq, 2 chasa za db-to deto e tupo i oshte 2 za tva tupo ime
   user: 'root',
   password: 'Manchester United',
   database: 'novashema',
@@ -40,6 +40,20 @@ app.post('/api/saveUser', (req, res) => {
     }
   });
 });
+
+// API route to fetch all users
+app.get('/api/users', (req, res) => {
+  const sql = 'SELECT * FROM users';
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Error fetching data:', err);
+      res.status(500).send('Error fetching data');
+    } else {
+      res.json(results);
+    }
+  });
+});
+
 
 // Staring the server
 app.listen(PORT, () => {
