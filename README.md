@@ -11,9 +11,11 @@ Download the project files on a machine
 
 Change the directory to where you downloaded the files
 
-Install docker and docker compose
+Install Mysql, and enter the specific data that is in index,js
 
-Run docker-compose command (docker-compose up --build)
+Install docker and docker-compose
+
+Run the docker-compose command (docker-compose up --build)
 
 Open on any browser with http://localhost:3400/
 
