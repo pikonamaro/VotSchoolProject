@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App</title>
+    <title>Vot Proekt</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Dobur den ot backneda!🕵️‍♂️</h1>
-    <h1>Those who znaqt!!!😈😈😈</h1>
-    <div>
-        <input type="text" id="name" placeholder="Enter your name" />
-        <input type="number" id="age" placeholder="Enter your age" />
-        <input type="text" id="school" placeholder="Enter your school" />
-        <button onclick="submitData()">Submit</button>
-    </div>
-    <p id="message"></p>
+    <h1>Proekt po Vot</h1>
 
+    <input type="text" id="name" placeholder="Enter your name" />
+    <input type="number" id="age" placeholder="Enter your age" />
+    <input type="text" id="school" placeholder="Enter your school" />
+    <button onclick="submitData()">Submit</button>
+
+    <p id="message" style="color: red; font-weight: bold;"></p>
+
+    <table id="userTable" class="container">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>School</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User data rows will be added here -->
+        </tbody>
+    </table>
+    
     <script src="script.js"></script>
 </body>
 </html>
